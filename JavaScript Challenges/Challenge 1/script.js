@@ -62,3 +62,30 @@ let numberOne = 1;
 let numberTwo = 2;
 let result = numberOne + numberTwo;
 console.log(result);
+
+// ### Step 7
+
+// - Understand the differences between the following operators:
+//   - strict equality operator (`===`)
+//   - strict inequality operator (`!==`)
+//   - loose equality operator (`==`)
+//   - loose inequality operator (`!=`)
+// - Use each of these operators at least twice to compare different data types.
+// - Understand the differences between the following operators:
+//   - greater than (`>`)
+//   - greater than or equals (`>=`)
+//   - less than (`<`)
+//   - less than or equals (`<=`)
+// - Use each of these operators at least twice to compare different data types.
+// - Commit: "Challenge 1 - Done with Step 7"
+
+let greetOne = "Hello";
+let greetTwo = "Hello";
+let resultGreet;
+if (greetOne === greetTwo) {
+  resultGreet = true;
+} else if (!greetOne || !greetTwo) {
+  return false;
+}
+
+console.log(resultGreet);
