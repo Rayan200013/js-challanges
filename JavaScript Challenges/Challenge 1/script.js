@@ -21,8 +21,6 @@ function fullName() {
 }
 console.error(fullName());
 
-
-
 let str = "this is a text";
 let num1 = 1215;
 let num2 = 999;
@@ -41,3 +39,22 @@ console.log(typeof obj);
 console.log(typeof arr);
 console.log(typeof nullValue);
 console.log(typeof undefinedValue);
+
+
+let myText = "this is a text";
+let myTexTwo = "this is 2nd text";
+let myTexThree = `This is 3rd text`;
+
+const counter = 3;
+const backtick = `This is my text using backticks ${counter} times`;
+const singleQuote = "This is my text using single quotations ${counter} times";
+const doubleQuote = "This is my text using double quotations ${counter} times";
+const tryThisAlso = `This is my new version, it's the ${2 + 3}th version`;
+
+console.log(backtick);
+console.log(singleQuote);
+console.log(doubleQuote);
+console.log(tryThisAlso);
+console.log(
+  `the difference between them is that when using the dollar sign in double and single quote it will not work thus when using it with backtick it will function normally like this: backtick: ${counter}`
+);
