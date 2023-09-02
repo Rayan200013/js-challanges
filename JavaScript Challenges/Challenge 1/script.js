@@ -58,11 +58,6 @@ console.log(
   `the difference between them is that when using the dollar sign in double and single quote it will not work thus when using it with backtick it will function normally like this: backtick: ${counter}`
 );
 
-// - Declare 2 string variables of your choice.
-// - Declare a new variable `result`.
-// - Concatenate the values of the first two variables and assign the result to the `result` variable.
-// - Commit: "Challenge 1 - Done with Step 6"
-
 let numberOne = 1;
 let numberTwo = 2;
 let result = numberOne + numberTwo;
