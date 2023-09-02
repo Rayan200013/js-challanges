@@ -77,3 +77,25 @@ console.log(`Substract: ${compute(10, 5, "-")}`);
 console.log(`Muliply: ${compute(10, 2, "*")}`);
 console.log(`Divide: ${compute(4, 2, "/")}`);
 console.log(`Divide ${compute(100, 0, "/")}`);
+
+// ## Step 2: Arrow Functions and Scopes
+
+const squareNumber = (number) => {
+  return number * number;
+};
+
+console.log(`sqaure Number of 2: ${squareNumber(2)}`);
+
+// ### Understanding Scopes
+
+var globalVar;
+
+function squareNumberTwo(numnber) {
+  let localVariable; // this is a block scope variable
+  localVariable = numnber * numnber; //this will be available only in the function where it was declared
+  return localVariable;
+}
+globalVar = squareNumberTwo(3);
+console.log(`globalVar: ${squareNumberTwo(2)}`);
+console.log(`globalVar: ${globalVar}`)
+// console.log(`localVar: ${localVariable}`); expected error not defined
