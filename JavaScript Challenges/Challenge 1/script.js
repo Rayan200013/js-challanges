@@ -21,6 +21,8 @@ function fullName() {
 }
 console.error(fullName());
 
+// step three
+
 let str = "this is a text";
 let num1 = 1215;
 let num2 = 999;
@@ -40,6 +42,8 @@ console.log(typeof arr);
 console.log(typeof nullValue);
 console.log(typeof undefinedValue);
 
+//step four
+
 let myText = "this is a text";
 let myTexTwo = "this is 2nd text";
 let myTexThree = `This is 3rd text`;
@@ -58,6 +62,8 @@ console.log(
   `the difference between them is that when using the dollar sign in double and single quote it will not work thus when using it with backtick it will function normally like this: backtick: ${counter}`
 );
 
+// step six
+
 let numberOne = 1;
 let numberTwo = 2;
 let result = numberOne + numberTwo;
@@ -65,27 +71,23 @@ console.log(result);
 
 // ### Step 7
 
-// - Understand the differences between the following operators:
-//   - strict equality operator (`===`)
-//   - strict inequality operator (`!==`)
-//   - loose equality operator (`==`)
-//   - loose inequality operator (`!=`)
-// - Use each of these operators at least twice to compare different data types.
-// - Understand the differences between the following operators:
-//   - greater than (`>`)
-//   - greater than or equals (`>=`)
-//   - less than (`<`)
-//   - less than or equals (`<=`)
-// - Use each of these operators at least twice to compare different data types.
-// - Commit: "Challenge 1 - Done with Step 7"
-
 let greetOne = "Hello";
 let greetTwo = "Hello";
 let resultGreet;
 if (greetOne === greetTwo) {
   resultGreet = true;
-} else if (!greetOne || !greetTwo) {
-  return false;
 }
 
 console.log(resultGreet);
+
+// ### Step 8
+
+let result0 = 5 + 3 * 2;
+
+console.log(result0);
+
+let result1 = 10 / 2 + 3;
+let result2 = 10 / (2 + 3);
+
+console.log(result1);
+console.log(result2);
