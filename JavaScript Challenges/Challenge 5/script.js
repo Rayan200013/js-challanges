@@ -47,10 +47,52 @@ document.body.appendChild(div);
 
 // ### Element Styling
 
-
 div.style.backgroundColor = "blue";
 paragraph.style.color = "#fff";
 paragraph.style.fontSize = "24px";
 paragraph.style.fontFamily = "Helvetica";
 paragraph.style.border = "solid 1px #000";
-header.style.fontStyle = "italic";
+// header.style.fontStyle = "italic";
+
+// ### Multiple Event Listeners
+
+const onChangeButton = document.createElement("button");
+onChangeButton.textContent = "hover me";
+onChangeButton.addEventListener("mouseover", () => {
+  onChangeButton.style.backgroundColor = "red";
+});
+onChangeButton.addEventListener("mouseout", () => {
+  onChangeButton.style.backgroundColor = "";
+});
+
+document.body.appendChild(onChangeButton);
+
+// Event Delegation
+
+const buttonContainer = document.getElementById("buttonContainer");
+buttonContainer.addEventListener("click", function (event) {
+  if (event.target.tagName === "BUTTON") {
+    console.log("Clicked button text:", event.target.textContent);
+  }
+});
+
+// Form Data Extraction
+
+const form = document.createElement("form");
+form.innerHTML = `
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name"><br><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email"><br><br>
+  <button type="submit">Submit</button>
+`;
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent default form submission
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  console.log("Name:", nameInput.value);
+  console.log("Email:", emailInput.value);
+});
+
+document.body.appendChild(form);
