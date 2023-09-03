@@ -25,9 +25,6 @@ console.log(allNumbers);
 
 // ### New Object with Spread
 
-// Construct another object named `additionalInfo` with properties like occupation, hobby, and education.
-// Using the spread operator, create a new object named `fullInfo` which merges the properties from both `personalInfo` and `additionalInfo`.
-
 let additionalInfo = {
   occupation: "bees",
   hobby: "Singing",
@@ -35,3 +32,12 @@ let additionalInfo = {
 };
 let fullInfo = { ...personalInfo, ...additionalInfo };
 console.log(fullInfo);
+
+const [firstNum, secondNum, thirdNum] = fiveNumbers;
+
+// ### Destructuring Objects
+
+// Using object destructuring, extract the name, location, and nationality properties from the `personalInfo` object into three separate variables with the same names.
+
+const { name, location, nationality } = personalInfo;
+console.log(personalInfo);
