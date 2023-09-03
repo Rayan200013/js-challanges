@@ -24,7 +24,7 @@ console.log(findMax(2, 2));
 
 // ### Nested Function
 
-// first assumption
+// first attempt
 // function compute(num1, num2, operation) {
 //   function arithmeticOperation(add, subtract, multiply, divide) {
 //     if (operation === "+") {
@@ -91,11 +91,46 @@ console.log(`sqaure Number of 2: ${squareNumber(2)}`);
 var globalVar;
 
 function squareNumberTwo(numnber) {
-  let localVariable; // this is a block scope variable
-  localVariable = numnber * numnber; //this will be available only in the function where it was declared
+  let localVariable;
+  localVariable = numnber * numnber;
   return localVariable;
 }
 globalVar = squareNumberTwo(3);
 console.log(`globalVar: ${squareNumberTwo(2)}`);
-console.log(`globalVar: ${globalVar}`)
+console.log(`globalVar: ${globalVar}`);
 // console.log(`localVar: ${localVariable}`); expected error not defined
+
+// ## Step 3: Loops
+
+// ### For Loop
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`Print out ${i}`);
+}
+
+// ### While Loop
+
+let i = 10;
+while (i >= 1) {
+  i--;
+  console.log(`print: ${i}`);
+}
+
+// ### Do-While Loop with Conditionals
+
+let j = 1;
+do {
+  if (j % 2 === 0) {
+    console.log(`The j: ${j}`);
+  }
+  j++;
+} while (j <= 10);
+
+// ### Advanced Loop Challenge
+
+const array1 = ["Apple", "Peach", "Banana", "lemon", "watermelon"];
+for (let i = 0; i < array1.length; i++) {
+  if (array1[i].length > 5) {
+    console.log(`length more than 5: ${array1[i]}`);
+  }
+}
