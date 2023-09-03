@@ -37,7 +37,21 @@ const [firstNum, secondNum, thirdNum] = fiveNumbers;
 
 // ### Destructuring Objects
 
-// Using object destructuring, extract the name, location, and nationality properties from the `personalInfo` object into three separate variables with the same names.
 
 const { name, location, nationality } = personalInfo;
 console.log(personalInfo);
+
+
+
+
+
+// Step 4: Advanced Operations
+
+// Nested Destructuring
+const { contactInfo: { email, phone } } = personalInfo;
+
+const [num1, num2, ...restOfNumbers] = fiveNumbers;
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const mergedObj = { ...obj1, ...obj2 };
