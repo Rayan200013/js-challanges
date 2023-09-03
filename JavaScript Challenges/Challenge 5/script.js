@@ -96,3 +96,38 @@ form.addEventListener("submit", function (event) {
 });
 
 document.body.appendChild(form);
+
+// Step 3: Advanced DOM Manipulations
+
+// DOM Cloning
+const originalDiv = document.getElementById("original");
+const cloneBtn = document.getElementById("clone-btn");
+
+cloneBtn.addEventListener("click", function () {
+  const clonedDiv = originalDiv.cloneNode(true);
+  clonedDiv.querySelector("p").textContent = "Cloned";
+  document.body.appendChild(clonedDiv);
+});
+
+// Element Removal
+const removeHeaderButton = document.createElement("button");
+removeHeaderButton.textContent = "Remove Header";
+removeHeaderButton.addEventListener("click", function () {
+  const header = document.querySelector("header");
+  if (header) {
+    header.remove();
+  }
+});
+document.body.appendChild(removeHeaderButton);
+
+// Inserting Elements before the footer
+function insertBeforeFooter(elementToInsert) {
+  const footer = document.querySelector("footer");
+  if (footer) {
+    footer.parentNode.insertBefore(elementToInsert, footer);
+  }
+}
+
+const elementToInsert = document.createElement("p");
+elementToInsert.textContent = "Inserted before the footer.";
+insertBeforeFooter(elementToInsert);
